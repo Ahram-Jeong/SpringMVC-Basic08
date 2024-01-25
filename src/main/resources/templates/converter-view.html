@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Converter</title>
+</head>
+<body>
+    <ul>
+        <li>${number}: <span th:text="${number}" ></span></li>
+        <li>${{number}}: <span th:text="${{number}}" ></span></li> <!--문자로 변환 된 값-->
+        <li>${ipPort}: <span th:text="${ipPort}" ></span></li> <!--객체를 문자로 변환-->
+        <li>${{ipPort}}: <span th:text="${{ipPort}}" ></span></li> <!--문자로 변환 된 값-->
+    </ul>
+</body>
+</html>
