@@ -1,5 +1,6 @@
 package ash.typeconverter.controller;
 
+import ash.typeconverter.type.IpPort;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,6 +19,13 @@ public class HelloController {
     @GetMapping("/hello-v2")
     public String helloV2(@RequestParam(name = "data") Integer data) {
         System.out.println("data = " + data);
+        return "OKAY";
+    }
+
+    @GetMapping("/ip-port")
+    public String ipPort(@RequestParam(name = "ipPort") IpPort ipPort) {
+        System.out.println("ipPort Ip = " + ipPort.getIp());
+        System.out.println("ipPort Port = " + ipPort.getPort());
         return "OKAY";
     }
 }
